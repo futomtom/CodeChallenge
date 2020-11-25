@@ -6,4 +6,4 @@
 * xcconfig for different build setting
 * Support login & logout, when they log in will display weather of last zip code.
 * Use extension for code resue
-* Seperate Viewcontrol, Service, Network, Model 
+* Seperate ViewController, Service, Network, Model 
