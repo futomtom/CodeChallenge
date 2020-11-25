@@ -4,6 +4,6 @@
 * Support dark mode
 * Save auth token in Keychain
 * xcconfig for different build setting
-* Support login & logout, when they log in will display last zipCode weather in the app.
+* Support login & logout, when they log in will display weather of last zip code.
 * Use extension for code resue
 * Seperate Viewcontrol, Service, Network, Model 
