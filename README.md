@@ -1,6 +1,6 @@
 # Code Challenge
 * Use ASWebAuthenticationSession for OAuth login 
-* Storyboard autolayout(loginVireController), writing constraints programmatically
+* Demonstrate autolayout by storyboard (loginVireController), and writing constraints programmatically(WeatherViewCpntroller)
 * Support dark mode
 * Save auth token in Keychain
 * xcconfig for different build setting
