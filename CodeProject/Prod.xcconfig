@@ -1,0 +1,16 @@
+//
+//  Prod.xcconfig
+//  CodeProject
+//
+//  Created by Alex Fu on 11/24/20.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+
+FaceBookAppID = 2532937336999736
+FBbaseURL = www.facebook.com/v7.0/dialog/oauth
+
+WeatherAPI_KEY = aa4f0fb37ee08a981e67e88402a08cc2
+WeatherBaseURL = api.openweathermap.org/data/2.5/
