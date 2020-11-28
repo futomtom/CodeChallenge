@@ -121,8 +121,8 @@ extension WeatherViewController: UITextFieldDelegate {
             }
         } errorHandler: { [weak self] error in
             DispatchQueue.main.async {
-                self?.valueLabel.text = "not found"
-                self?.showAlert(title: "Not Found", message: "") 
+                self?.valueLabel.text = error.rawValue
+                self?.showAlert(title: error.rawValue, message: "") 
             }
         }
     }

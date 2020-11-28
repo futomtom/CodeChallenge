@@ -51,7 +51,6 @@ public extension UIStackView {
     }
 }
 
-    public enum ErrorType {
-        case unknown
-        case searchError
+public enum ErrorType: String {
+        case unknown, searchError, decodeError
     }

@@ -25,7 +25,12 @@ class OpenWeatherServices: RequestService {
     }
 
     func weather(type: OpenWeatherType, completion: @escaping (WeatherModel) -> Void, errorHandler: @escaping (ErrorType) -> Void) {
-        requestData(urlString: type.endpoint(search: type), completion: { data in
+        guard let url = URL(string: type.endpoint(search: type)) else {
+            errorHandler(.searchError)
+            return 
+        }
+
+        requestData(url: url, completion: { data in
             completion(data)
         }, errorHandler: { error in
             errorHandler(error)
