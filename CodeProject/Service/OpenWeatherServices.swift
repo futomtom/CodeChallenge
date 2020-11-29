@@ -7,7 +7,7 @@
 import Foundation
 import UIKit
 
-class OpenWeatherServices: RequestService {
+class OpenWeatherServices {
     public enum OpenWeatherType {
         case zipcode(zip: String)
         // case city(name: String)  //expandable
@@ -24,16 +24,25 @@ class OpenWeatherServices: RequestService {
         }
     }
 
-    func weather(type: OpenWeatherType, completion: @escaping (WeatherModel) -> Void, errorHandler: @escaping (ErrorType) -> Void) {
+    static func weather(type: OpenWeatherType, completion: @escaping (Result<WeatherModel, ErrorType>) -> Void) {
         guard let url = URL(string: type.endpoint(search: type)) else {
-            errorHandler(.searchError)
+            completion(.failure(.searchFail)) //endpoint fail, should not happen
             return 
         }
 
-        requestData(url: url, completion: { data in
-            completion(data)
-        }, errorHandler: { error in
-            errorHandler(error)
-        })
+        let request = URLRequest(url: url)
+
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let data = data {
+                do {
+                    let weather = try JSONDecoder().decode(WeatherModel.self, from: data)
+                    completion(.success(weather))
+                } catch {
+                    completion(.failure(.decodeFail))
+                }
+            } else {
+                completion(.failure(.nodata))
+            }
+        }.resume()
     }
 }

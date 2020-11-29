@@ -111,20 +111,17 @@ extension WeatherViewController: UITextFieldDelegate {
 
 
     func getWeather(for zipCode: String) {
-        let weatherService = OpenWeatherServices()
-        weatherService.weather(type: .zipcode(zip: zipCode)) { [weak self] model in
-            if let tempeture = model.main?.temp {
-                let degree = Int(tempeture)
-                DispatchQueue.main.async {
-                    self?.valueLabel.text = "\(degree) F"
-                }
+        OpenWeatherServices.weather(type: .zipcode(zip: zipCode)) { [weak self] result in
+            var degree = ""
+            switch result {
+            case .success(let weather):
+                degree = String(format: "%.1f F",weather.main.temp)
+            case .failure(let error):
+                degree = error.localizedDescription
             }
-        } errorHandler: { [weak self] error in
             DispatchQueue.main.async {
-                self?.valueLabel.text = error.rawValue
-                self?.showAlert(title: error.rawValue, message: "") 
+                self?.valueLabel.text = degree
             }
         }
     }
-
 }

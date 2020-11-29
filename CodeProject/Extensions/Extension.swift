@@ -51,6 +51,19 @@ public extension UIStackView {
     }
 }
 
-public enum ErrorType: String {
-        case unknown, searchError, decodeError
+public enum ErrorType: Error {
+        case searchFail, nodata, decodeFail
     }
+
+extension ErrorType: LocalizedError {
+    public var errorDescription: String? {
+        switch self {
+        case .searchFail:
+            return NSLocalizedString("Endpoint Error.", comment: "")
+        case .decodeFail:
+            return NSLocalizedString("Data decode fail.", comment: "")
+        case .nodata:
+            return NSLocalizedString("no data return", comment: "")
+        }
+    }
+}

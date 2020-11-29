@@ -3,7 +3,8 @@
 * Demonstrate autolayout by storyboard (loginVireController), and writing constraints programmatically(WeatherViewCpntroller)
 * Support dark mode
 * Save auth token in Keychain
-* xcconfig for different build setting
+* Use xcconfig for different build setting
 * Support login & logout, when they log in will display weather of last zip code.
 * Use extension for code resue
-* Seperate ViewController, Service, Network, Model 
+* Separate ViewController, Service, Model 
+* Handle REST API with codable and Result 

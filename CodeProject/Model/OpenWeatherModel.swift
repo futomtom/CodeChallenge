@@ -6,11 +6,11 @@
 import Foundation
 
 struct WeatherModel: Codable {
-    var main:Main?
+    var main: Main
 }
 
 struct Main: Codable {
-    var temp:Double?
+    var temp: Double
 }
 
 

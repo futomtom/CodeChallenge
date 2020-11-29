@@ -17,7 +17,6 @@
 		82C76254256E277300851DED /* OpenWeatherServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C76253256E277300851DED /* OpenWeatherServices.swift */; };
 		82C76260256E2BDD00851DED /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7625F256E2BDD00851DED /* LoginViewController.swift */; };
 		82C76264256E2DF700851DED /* BorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C76263256E2DF700851DED /* BorderButton.swift */; };
-		82C7626D256E3C3600851DED /* RequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7626C256E3C3600851DED /* RequestService.swift */; };
 		82C76278256E427600851DED /* KeyChainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C76277256E427600851DED /* KeyChainWrapper.swift */; };
 		82C7627B256E437600851DED /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C7627A256E437600851DED /* Constant.swift */; };
 		82C76284256E477700851DED /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C76283256E477700851DED /* Configuration.swift */; };
@@ -36,7 +35,6 @@
 		82C76253256E277300851DED /* OpenWeatherServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenWeatherServices.swift; sourceTree = "<group>"; };
 		82C7625F256E2BDD00851DED /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		82C76263256E2DF700851DED /* BorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderButton.swift; sourceTree = "<group>"; };
-		82C7626C256E3C3600851DED /* RequestService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestService.swift; sourceTree = "<group>"; };
 		82C76277256E427600851DED /* KeyChainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainWrapper.swift; sourceTree = "<group>"; };
 		82C7627A256E437600851DED /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		82C7627D256E439100851DED /* Prod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Prod.xcconfig; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 		82C76257256E278800851DED /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				82C7626C256E3C3600851DED /* RequestService.swift */,
 				82C76253256E277300851DED /* OpenWeatherServices.swift */,
 			);
 			path = Service;
@@ -215,7 +212,6 @@
 				82C76284256E477700851DED /* Configuration.swift in Sources */,
 				823BF9FE256E6FED00FB78CD /* Extension.swift in Sources */,
 				82C76237256E249400851DED /* WeatherViewController.swift in Sources */,
-				82C7626D256E3C3600851DED /* RequestService.swift in Sources */,
 				82C76264256E2DF700851DED /* BorderButton.swift in Sources */,
 				82C76260256E2BDD00851DED /* LoginViewController.swift in Sources */,
 				82C76233256E249400851DED /* AppDelegate.swift in Sources */,
