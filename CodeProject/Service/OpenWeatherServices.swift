@@ -24,7 +24,7 @@ class OpenWeatherServices {
         }
     }
 
-    static func weather(type: OpenWeatherType, completion: @escaping (Result<WeatherModel, ErrorType>) -> Void) {
+    static func weather<T: Decodable>(type: OpenWeatherType, completion: @escaping (Result<T, ErrorType>) -> Void) {
         guard let url = URL(string: type.endpoint(search: type)) else {
             completion(.failure(.searchFail)) //endpoint fail, should not happen
             return 
@@ -35,7 +35,7 @@ class OpenWeatherServices {
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let data = data {
                 do {
-                    let weather = try JSONDecoder().decode(WeatherModel.self, from: data)
+                    let weather = try JSONDecoder().decode(T.self, from: data)
                     completion(.success(weather))
                 } catch {
                     completion(.failure(.cityNotFound))

@@ -111,7 +111,7 @@ extension WeatherViewController: UITextFieldDelegate {
 
 
     func getWeather(for zipCode: String) {
-        OpenWeatherServices.weather(type: .zipcode(zip: zipCode)) { [weak self] result in
+        OpenWeatherServices.weather(type: .zipcode(zip: zipCode)) { [weak self] (result: Result<WeatherModel, ErrorType>) in
             var degree = ""
             switch result {
             case .success(let weather):
