@@ -38,7 +38,7 @@ class OpenWeatherServices {
                     let weather = try JSONDecoder().decode(WeatherModel.self, from: data)
                     completion(.success(weather))
                 } catch {
-                    completion(.failure(.decodeFail))
+                    completion(.failure(.cityNotFound))
                 }
             } else {
                 completion(.failure(.nodata))
